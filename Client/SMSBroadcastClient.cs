@@ -38,24 +38,54 @@ namespace SMSBroadcast.Client
         /// <summary>
         /// Attempts to send a single message
         /// </summary>
-        /// <param name="broadcastRequest">The SMS Object to send</param>
+        /// <param name="outboundMessage">The SMS Object to send</param>
         /// <returns></returns>
-        public async Task<SMSBroadcastResponse> SendSMSAsync(SMSBroadcastOutboundMessage broadcastRequest)
+        public async Task<SMSBroadcastResponse> SendSMSAsync(SMSBroadcastOutboundMessage outboundMessage)
         {
             var request = CreateDefaultRequest(Method.POST);
-            request.AddParameter("to", broadcastRequest.To);
-            request.AddParameter("message", broadcastRequest.Message);
-            request.AddParameter("message", broadcastRequest.Message);
-            if (!string.IsNullOrWhiteSpace(broadcastRequest.From))
-                request.AddParameter("from", broadcastRequest.From);
-            if (!string.IsNullOrWhiteSpace(broadcastRequest.Reference))
-                request.AddParameter("ref", broadcastRequest.Reference);
-            if (broadcastRequest.MaxSplit!=null)
-                request.AddParameter("maxSplit", broadcastRequest.MaxSplit);
-            if (broadcastRequest.Delay != null)
-                request.AddParameter("delay", broadcastRequest.Delay);
+            request.AddParameter("to", outboundMessage.To);
+            request.AddParameter("message", outboundMessage.Message);
+            request.AddParameter("message", outboundMessage.Message);
+            if (!string.IsNullOrWhiteSpace(outboundMessage.From))
+                request.AddParameter("from", outboundMessage.From);
+            if (!string.IsNullOrWhiteSpace(outboundMessage.Reference))
+                request.AddParameter("ref", outboundMessage.Reference);
+            if (outboundMessage.MaxSplit!=null)
+                request.AddParameter("maxSplit", outboundMessage.MaxSplit);
+            if (outboundMessage.Delay != null)
+                request.AddParameter("delay", outboundMessage.Delay);
             var response = await Client.ExecuteAsync<SMSBroadcastResponse>(request);
             return new SMSBroadcastResponse(response.Content);
+        }
+
+        /// <summary>
+        /// Attempts to send multiple messages
+        /// </summary>
+        /// <param name="outboundMessages">List of Outbound Messages to send</param>
+        /// <returns></returns>
+        public async Task<IEnumerable<SMSBroadcastResponse>> SendSMSAsync(IEnumerable<SMSBroadcastOutboundMessage> outboundMessages)
+        {
+                 SMSBroadcastResponse[] responses = new SMSBroadcastResponse[outboundMessages.Count()];
+            int count = 0;
+            foreach(var outboundMessage in outboundMessages)
+            { 
+            var request = CreateDefaultRequest(Method.POST);
+            request.AddParameter("to", outboundMessage.To);
+            request.AddParameter("message", outboundMessage.Message);
+            request.AddParameter("message", outboundMessage.Message);
+            if (!string.IsNullOrWhiteSpace(outboundMessage.From))
+                request.AddParameter("from", outboundMessage.From);
+            if (!string.IsNullOrWhiteSpace(outboundMessage.Reference))
+                request.AddParameter("ref", outboundMessage.Reference);
+            if (outboundMessage.MaxSplit != null)
+                request.AddParameter("maxSplit", outboundMessage.MaxSplit);
+            if (outboundMessage.Delay != null)
+                request.AddParameter("delay", outboundMessage.Delay);
+           var response = await Client.ExecuteAsync<SMSBroadcastResponse>(request);
+                responses[count++] = new SMSBroadcastResponse(response.Content);
+            }
+            return responses;
+
         }
 
         /// <summary>
