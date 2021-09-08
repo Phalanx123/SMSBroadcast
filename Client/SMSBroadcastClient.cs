@@ -8,10 +8,16 @@ using System.Threading.Tasks;
 
 namespace SMSBroadcast.Client
 {
-    class SMSBroadcastClient
+   public class SMSBroadcastClient
     {
         private RestClient Client { get; set; }
+        /// <summary>
+        /// SMSBroadcast Username
+        /// </summary>
         public string  Username{get;set;}
+        /// <summary>
+        /// SMSBroadcast Password
+        /// </summary>
         public string Password { get;set;}
  
         /// <summary>

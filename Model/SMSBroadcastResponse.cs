@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SMSBroadcast.Model
 {
-	class SMSBroadcastResponse
+	public class SMSBroadcastResponse
     {
         public string To { get; set; }
         public string Ref { get; set; }

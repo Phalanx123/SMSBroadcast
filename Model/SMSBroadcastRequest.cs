@@ -41,13 +41,6 @@ public class SMSBroadcastRequest
     /// </summary>
     public int Delay { get; set; }
 
-
-    /// <summary>
-    /// Initializes a new instance of the <see cref="SMSBroadcastRequest" /> class.
-    /// </summary>
-    [JsonConstructorAttribute]
-    protected SMSBroadcastRequest() { }
-
     /// <summary>
     /// Initializes a new instance of the <see cref="SMSBroadcastRequest" /> class.
     /// </summary>
