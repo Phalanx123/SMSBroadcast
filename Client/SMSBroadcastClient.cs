@@ -50,9 +50,9 @@ namespace SMSBroadcast.Client
                 request.AddParameter("from", broadcastRequest.From);
             if (!string.IsNullOrWhiteSpace(broadcastRequest.Reference))
                 request.AddParameter("ref", broadcastRequest.Reference);
-            if (!string.IsNullOrWhiteSpace(broadcastRequest.From))
+            if (broadcastRequest.MaxSplit!=null)
                 request.AddParameter("maxSplit", broadcastRequest.MaxSplit);
-            if (!string.IsNullOrWhiteSpace(broadcastRequest.From))
+            if (broadcastRequest.Delay != null)
                 request.AddParameter("delay", broadcastRequest.Delay);
             var response = await Client.ExecuteAsync<SMSBroadcastResponse>(request);
             return new SMSBroadcastResponse(response.Content);
