@@ -13,10 +13,12 @@ namespace SMSBroadcast.Client
         private RestClient Client { get; set; }
         public string  Username{get;set;}
         public string Password { get;set;}
-        public SMSBroadcastClient()
-        {
-            Client = new RestClient("http://www.smsbroadcast.com.au/api-adv.php");
-        }
+ 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SMSBroadcastClient" /> class.
+        /// </summary>
+        /// <param name="userName">Username</param>
+        /// <param name="password">Password</param>
         public SMSBroadcastClient(string userName, string password)
         {
             Client = new RestClient("http://www.smsbroadcast.com.au/api-adv.php");
