@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace SMSBroadcast.Model
 {
@@ -24,13 +26,13 @@ namespace SMSBroadcast.Model
         /// We recommend using the international format, but your messages will be accepted in any of the above formats.
         /// To send the same message to multiple recipients, the numbers should be separated by a comma.The numbers should contain only numbers, with no spaces or other characters.
         /// </summary>
-        public string To { get; set; }
+        public string? To { get; set; }
 
 
         /// <summary>
         /// The content of the SMS message. Must not be longer than 160 characters unless the MaxSplit parameter is used.
         /// </summary>
-        public string Message { get; set; }
+        public string? Message { get; set; }
 
         /// <summary>
         /// Your reference number for the message to help you track the message status. This parameter is optional and can be up to 20 characters.
@@ -68,6 +70,22 @@ namespace SMSBroadcast.Model
                 Reference = null;
             else
                 Reference = reference;
+        }
+
+        /// <summary>
+        /// Initalises object based on Query String
+        /// </summary>
+        /// <param name="queryString"></param>
+        public SMSBroadcastMessage(string queryString)
+        {
+            var parsed = HttpUtility.ParseQueryString(queryString);  
+            if (parsed == null)
+                throw new ArgumentNullException(nameof(queryString));
+
+            To = parsed["to"];
+            From = parsed["from"];
+            Message = parsed["message"];
+            Reference = parsed["reference"];
         }
     }
 }

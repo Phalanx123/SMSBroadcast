@@ -21,7 +21,10 @@ namespace SMSBroadcast.Model
             Content = content;
         }
 
-        private string Content { get; set; }
+        /// <summary>
+        /// Unmodified response
+        /// </summary>
+        public string Content { get; private set; }
 
         /// <summary>
         /// Was the SMS sent successfully

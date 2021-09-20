@@ -8,8 +8,10 @@ namespace SMSBroadcast.Model
 {
    public class SMSBroadcastInboundMessage : SMSBroadcastMessage
     {
-        public SMSBroadcastInboundMessage(string message, string to, string? from, string? reference) :base(to,from,message,reference)
-        { 
+
+        public SMSBroadcastInboundMessage(string content) : base(content)
+        {
         }
+      
     }
 }
