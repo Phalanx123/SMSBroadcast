@@ -47,12 +47,12 @@ public class SMSBroadcastOutboundMessage : SMSBroadcastMessage
     {
         var sb = new StringBuilder();
         sb.Append("class SMSBroadcastRequest {\n");
-        sb.Append("  Message: ").Append(Message).Append("\n");
-        sb.Append("  To: ").Append(To).Append("\n");
-        sb.Append("  From: ").Append(From).Append("\n");
-        sb.Append("  Reference: ").Append(Reference).Append("\n");
-        sb.Append("  MaxSplit: ").Append(MaxSplit).Append("\n");
-        sb.Append("  Delay: ").Append(Delay).Append("\n");
+        sb.Append("  Message: ").Append(Message).Append('\n');
+        sb.Append("  To: ").Append(To).Append('\n');
+        sb.Append("  From: ").Append(From).Append('\n');
+        sb.Append("  Reference: ").Append(Reference).Append('\n');
+        sb.Append("  MaxSplit: ").Append(MaxSplit).Append('\n');
+        sb.Append("  Delay: ").Append(Delay).Append('\n');
         sb.Append("}\n");
         return sb.ToString();
     }
@@ -63,8 +63,9 @@ public class SMSBroadcastOutboundMessage : SMSBroadcastMessage
     /// <returns>If the message sends successfully for all receipients, the number of credits</returns>
     public int GetCreditCost()
     {
-        var numberOfRecipients = To.Split(",").Count();
-            return (Message.Length > 160 ? (int)Math.Round((double)Message.Length / 153, 0) : 1) * numberOfRecipients;
+        var numberOfRecipients = To!.Split(",").Length;
+        
+            return (Message!.Length > 160 ? (int)Math.Round((double)Message.Length / 153, 0) : 1) * numberOfRecipients;
        
     }
 }

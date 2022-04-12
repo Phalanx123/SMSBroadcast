@@ -42,7 +42,7 @@ namespace SMSBroadcast.Client
         /// <returns></returns>
         public async Task<SMSBroadcastResponse> SendSMSAsync(SMSBroadcastOutboundMessage outboundMessage)
         {
-            var request = CreateDefaultRequest(Method.POST);
+            var request = CreateDefaultRequest(Method.Post);
             request.AddParameter("to", outboundMessage.To);
             request.AddParameter("message", outboundMessage.Message);
             request.AddParameter("message", outboundMessage.Message);
@@ -51,9 +51,9 @@ namespace SMSBroadcast.Client
             if (!string.IsNullOrWhiteSpace(outboundMessage.Reference))
                 request.AddParameter("ref", outboundMessage.Reference);
             if (outboundMessage.MaxSplit!=null)
-                request.AddParameter("maxSplit", outboundMessage.MaxSplit);
+                request.AddQueryParameter("maxSplit", outboundMessage.MaxSplit.ToString());
             if (outboundMessage.Delay != null)
-                request.AddParameter("delay", outboundMessage.Delay);
+                request.AddQueryParameter("delay", outboundMessage.Delay.ToString());
             var response = await Client.ExecuteAsync<SMSBroadcastResponse>(request);
             return new SMSBroadcastResponse(response.Content);
         }
@@ -69,7 +69,7 @@ namespace SMSBroadcast.Client
             int count = 0;
             foreach(var outboundMessage in outboundMessages)
             { 
-            var request = CreateDefaultRequest(Method.POST);
+            var request = CreateDefaultRequest(Method.Post);
             request.AddParameter("to", outboundMessage.To);
             request.AddParameter("message", outboundMessage.Message);
             request.AddParameter("message", outboundMessage.Message);
@@ -78,9 +78,9 @@ namespace SMSBroadcast.Client
             if (!string.IsNullOrWhiteSpace(outboundMessage.Reference))
                 request.AddParameter("ref", outboundMessage.Reference);
             if (outboundMessage.MaxSplit != null)
-                request.AddParameter("maxSplit", outboundMessage.MaxSplit);
+                request.AddQueryParameter("maxsplit", outboundMessage.MaxSplit.ToString());
             if (outboundMessage.Delay != null)
-                request.AddParameter("delay", outboundMessage.Delay);
+                request.AddQueryParameter("delay", outboundMessage.Delay.ToString());
            var response = await Client.ExecuteAsync<SMSBroadcastResponse>(request);
                 responses[count++] = new SMSBroadcastResponse(response.Content);
             }
@@ -94,7 +94,7 @@ namespace SMSBroadcast.Client
         /// <returns>Object containing the remaining balance</returns>
         public async Task<SMSBroadcastBalance> GetSMSBroadcastBalanaceAsync()
         {
-            var request = CreateDefaultRequest(Method.GET);
+            var request = CreateDefaultRequest(Method.Get);
             request.AddParameter("action", "balance");
             var response = await Client.ExecuteAsync<SMSBroadcastBalance>(request);
             return new SMSBroadcastBalance(response.Content);
@@ -102,7 +102,7 @@ namespace SMSBroadcast.Client
 
         private RestRequest CreateDefaultRequest(Method method)
         {
-            var request = new RestRequest(method);
+            var request = new RestRequest("http://www.smsbroadcast.com.au/api-adv.php",method);
             if (string.IsNullOrWhiteSpace(Username))
                 throw new ArgumentException("Username cannot be null");
             request.AddParameter("username", Username);
