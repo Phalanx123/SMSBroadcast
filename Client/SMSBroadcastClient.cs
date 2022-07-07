@@ -51,7 +51,7 @@ namespace SMSBroadcast.Client
             if (!string.IsNullOrWhiteSpace(outboundMessage.Reference))
                 request.AddParameter("ref", outboundMessage.Reference);
             if (outboundMessage.MaxSplit!=null)
-                request.AddQueryParameter("maxSplit", outboundMessage.MaxSplit.ToString());
+                request.AddQueryParameter("maxsplit", outboundMessage.MaxSplit.ToString());
             if (outboundMessage.Delay != null)
                 request.AddQueryParameter("delay", outboundMessage.Delay.ToString());
             var response = await Client.ExecuteAsync<SMSBroadcastResponse>(request);
