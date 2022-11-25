@@ -26,7 +26,7 @@ public class SMSBroadcastOutboundMessage : SMSBroadcastMessage
     /// <summary>
     /// Initializes a new instance of the <see cref="SMSBroadcastOutboundMessage" /> class.
     /// </summary>
-    /// <param name="message">The content of the SMS message. Must not be longer than 160 characters unless the maxsplit parameter is used.
+    /// <param name="message">The content of the SMS message. Must not be longer than 160 characters unless the maxsplit parameter is used.</param>
     /// <param name="to"> The receiving mobile number(s). Can be comma seperated values </param>
     /// <param name="from">The sender ID for the messages. Can be a mobile number or letters, up to 11 characters and should not contain punctuation or spaces.</param>
     /// <param name="reference">Your reference number for the message to help you track the message status. This parameter is optional and can be up to 20 characters.</param>

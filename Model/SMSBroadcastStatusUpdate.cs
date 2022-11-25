@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace SMSBroadcast.Model
 {
+    /// <summary>
+    /// Status Update
+    /// </summary>
     public class SMSBroadcastStatusUpdate
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SMSBroadcastStatusUpdate" /> class.
         /// </summary>
-        /// <param name="content">The returned content from SMS Broadcast</param>
+    
         public SMSBroadcastStatusUpdate()
         {
             throw new NotImplementedException();
