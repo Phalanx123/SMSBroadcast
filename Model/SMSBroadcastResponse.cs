@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.Json.Serialization;
+﻿using System.Linq;
 
 namespace SMSBroadcast.Model
 {
@@ -34,8 +29,8 @@ namespace SMSBroadcast.Model
         /// <summary>
         /// Returns either OK or BAD depending on result of SMS being sent
         /// </summary>
-        public string Status => Content.Split(':').First(); 
-        
+        public string Status => Content.Split(':').First();
+
         /// <summary>
         /// The number that was sent the message
         /// </summary>
@@ -44,7 +39,7 @@ namespace SMSBroadcast.Model
         /// <summary>
         /// SMS Broadcasts reference number
         /// </summary>
-        public string? SMSRef => Status == "OK"? Content.Split(':').Skip(2).FirstOrDefault()?.Replace("\n",""):null;
+        public string? SMSRef => Status == "OK" ? Content.Split(':').Skip(2).FirstOrDefault()?.Replace("\n", "") : null;
 
         /// <summary>
         /// Error message such as Invalid Number

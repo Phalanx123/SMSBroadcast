@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 
 namespace SMSBroadcast.Model
@@ -78,7 +75,7 @@ namespace SMSBroadcast.Model
         /// <param name="queryString"></param>
         public SMSBroadcastMessage(string queryString)
         {
-            var parsed = HttpUtility.ParseQueryString(queryString);  
+            var parsed = HttpUtility.ParseQueryString(queryString);
             if (parsed == null)
                 throw new ArgumentNullException(nameof(queryString));
 

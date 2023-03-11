@@ -1,8 +1,6 @@
 ﻿
 using System;
-using System.Linq;
 using System.Text;
-using System.Text.Json.Serialization;
 
 namespace SMSBroadcast.Model;
 
@@ -64,8 +62,8 @@ public class SMSBroadcastOutboundMessage : SMSBroadcastMessage
     public int GetCreditCost()
     {
         var numberOfRecipients = To!.Split(",").Length;
-        
-            return (Message!.Length > 160 ? (int)Math.Round((double)Message.Length / 153, 0) : 1) * numberOfRecipients;
-       
+
+        return (Message!.Length > 160 ? (int)Math.Round((double)Message.Length / 153, 0) : 1) * numberOfRecipients;
+
     }
 }

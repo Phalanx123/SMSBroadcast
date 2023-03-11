@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SMSBroadcast.Extensions
 {
@@ -20,7 +18,7 @@ namespace SMSBroadcast.Extensions
         /// <returns></returns>
         public static int GetCreditCost(this IEnumerable<SMSBroadcastOutboundMessage> outboundMessages)
         {
-            return outboundMessages.Select(x => x.Message).Sum(x => x.Length > 160 ? (int) Math.Round((double)x.Length / 153,0) : 1);
+            return outboundMessages.Select(x => x.Message).Sum(x => x.Length > 160 ? (int)Math.Round((double)x.Length / 153, 0) : 1);
         }
 
     }

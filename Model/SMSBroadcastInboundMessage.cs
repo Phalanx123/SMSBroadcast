@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SMSBroadcast.Model
+﻿namespace SMSBroadcast.Model
 {
     /// <summary>
     /// Inbound Message
     /// </summary>
-   public class SMSBroadcastInboundMessage : SMSBroadcastMessage
+    public class SMSBroadcastInboundMessage : SMSBroadcastMessage
     {
         /// <summary>
         /// Inbound Message
@@ -18,6 +12,6 @@ namespace SMSBroadcast.Model
         public SMSBroadcastInboundMessage(string content) : base(content)
         {
         }
-      
+
     }
 }
