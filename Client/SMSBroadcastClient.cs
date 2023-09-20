@@ -65,7 +65,7 @@ namespace SMSBroadcast.Client
         public async Task<IEnumerable<SMSBroadcastResponse>> SendSMSAsync(IEnumerable<SMSBroadcastOutboundMessage> outboundMessages)
         {
             SMSBroadcastResponse[] responses = new SMSBroadcastResponse[outboundMessages.Count()];
-            int count = 0;
+            var count = 0;
             foreach (var outboundMessage in outboundMessages)
             {
                 var request = CreateDefaultRequest(Method.Post);
