@@ -1,0 +1,59 @@
+﻿# --- Build outputs
+bin/
+obj/
+artifacts/
+
+# --- Rider / JetBrains
+.idea/
+*.sln.iml
+
+# --- Visual Studio
+.vs/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# --- ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# --- Logs & test artefacts
+*.log
+logs/
+TestResult*/
+.vstest/
+*.trx
+*.coverage
+*.coveragexml
+.coverage
+.coverageinfo
+nunit-*.xml
+
+# --- NuGet & packing
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+project.assets.json
+*.nupkg
+*.snupkg
+.nuget/NuGet.Config
+
+# --- Publish profiles
+*.pubxml
+*.pubxml.user
+*.publish.xml
+
+# --- OS cruft
+.DS_Store
+Thumbs.db
+
+# --- Env & secrets (do not commit real creds)
+*.env
+*.env.*
+samples/SmsBroadcast.Samples.Console/appsettings.Development.json
+samples/SmsBroadcast.Samples.Console/.env
+
+# Note: .NET User Secrets are stored outside the repo by design.

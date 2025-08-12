@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "AgnNHc9pRPM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\AFerreira\\RiderProjects\\SmsBroadcast\\src\\SmsBroadcast.Abstractions\\SmsBroadcast.Abstractions\\SmsBroadcast.Abstractions.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AFerreira\\.nuget\\packages\\oneof\\3.0.271\\oneof.3.0.271.nupkg.sha512",
+    "C:\\Users\\AFerreira\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.4\\microsoft.netcore.app.ref.9.0.4.nupkg.sha512",
+    "C:\\Users\\AFerreira\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.4\\microsoft.windowsdesktop.app.ref.9.0.4.nupkg.sha512",
+    "C:\\Users\\AFerreira\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.4\\microsoft.aspnetcore.app.ref.9.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
