@@ -9,6 +9,7 @@
 
     <ItemGroup>
         <PackageReference Include="coverlet.collector" Version="6.0.4"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.8" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0"/>
         <PackageReference Include="xunit" Version="2.9.2"/>
         <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2"/>
@@ -19,8 +20,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\src\SmsBroadcast.Abstractions\SmsBroadcast.Abstractions\SmsBroadcast.Abstractions.csproj" />
-      <ProjectReference Include="..\..\..\src\SmsBroadcast\SmsBroadcast\SmsBroadcast.csproj" />
+      <ProjectReference Include="..\..\..\src\SmsBroadcast.Abstractions\SmsBroadcast.Abstractions.csproj" />
+      <ProjectReference Include="..\..\..\src\SmsBroadcast.Extensions.DependencyInjection\SmsBroadcast.Extensions.DependencyInjection.csproj" />
+      <ProjectReference Include="..\..\..\src\SmsBroadcast\SmsBroadcast.csproj" />
     </ItemGroup>
 
 </Project>
