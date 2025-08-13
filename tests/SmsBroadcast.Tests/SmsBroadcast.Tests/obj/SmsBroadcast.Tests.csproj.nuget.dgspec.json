@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\AFerreira\\RiderProjects\\SmsBroadcast\\src\\SmsBroadcast.Abstractions\\SmsBroadcast.Abstractions.csproj": {
-      "version": "1.0.0",
+      "version": "0.1.1",
       "restore": {
         "projectUniqueName": "C:\\Users\\AFerreira\\RiderProjects\\SmsBroadcast\\src\\SmsBroadcast.Abstractions\\SmsBroadcast.Abstractions.csproj",
         "projectName": "SmsBroadcast.Abstractions",
@@ -51,6 +51,12 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "OneOf": {
               "target": "Package",
               "version": "[3.0.271, )"
@@ -380,7 +386,7 @@
       }
     },
     "C:\\Users\\AFerreira\\RiderProjects\\SmsBroadcast\\src\\SmsBroadcast.Extensions.DependencyInjection\\SmsBroadcast.Extensions.DependencyInjection.csproj": {
-      "version": "1.0.0",
+      "version": "0.1.1",
       "restore": {
         "projectUniqueName": "C:\\Users\\AFerreira\\RiderProjects\\SmsBroadcast\\src\\SmsBroadcast.Extensions.DependencyInjection\\SmsBroadcast.Extensions.DependencyInjection.csproj",
         "projectName": "SmsBroadcast.Extensions.DependencyInjection",
@@ -448,6 +454,12 @@
             "Microsoft.Extensions.Http.Polly": {
               "target": "Package",
               "version": "[9.0.8, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Polly": {
               "target": "Package",
@@ -778,7 +790,7 @@
       }
     },
     "C:\\Users\\AFerreira\\RiderProjects\\SmsBroadcast\\src\\SmsBroadcast\\SmsBroadcast.csproj": {
-      "version": "1.0.0",
+      "version": "0.1.1",
       "restore": {
         "projectUniqueName": "C:\\Users\\AFerreira\\RiderProjects\\SmsBroadcast\\src\\SmsBroadcast\\SmsBroadcast.csproj",
         "projectName": "SmsBroadcast",
@@ -839,6 +851,12 @@
             "Microsoft.Extensions.Options.DataAnnotations": {
               "target": "Package",
               "version": "[9.0.8, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -1165,7 +1183,7 @@
       }
     },
     "C:\\Users\\AFerreira\\RiderProjects\\SmsBroadcast\\tests\\SmsBroadcast.Tests\\SmsBroadcast.Tests\\SmsBroadcast.Tests.csproj": {
-      "version": "1.0.0",
+      "version": "0.1.1",
       "restore": {
         "projectUniqueName": "C:\\Users\\AFerreira\\RiderProjects\\SmsBroadcast\\tests\\SmsBroadcast.Tests\\SmsBroadcast.Tests\\SmsBroadcast.Tests.csproj",
         "projectName": "SmsBroadcast.Tests",

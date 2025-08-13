@@ -10,11 +10,11 @@ public sealed class SmsBroadcastOptions
     /// <summary>
     /// Username for an SMS Broadcast account.
     /// </summary>
-    [Required] public string Username { get; init; } = null!;
+    [Required] public string Username { get; set; } = null!;
     /// <summary>
     /// Password for an SMS Broadcast account.
     /// </summary>
-    [Required] public string Password { get; init; } = null!;
+    [Required] public string Password { get; set; } = null!;
 
     /// <summary>Base API host; keep default per docs.</summary>
     public Uri BaseUri { get; init; } = new("https://api.smsbroadcast.com.au");

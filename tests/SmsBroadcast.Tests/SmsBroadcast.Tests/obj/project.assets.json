@@ -745,14 +745,14 @@
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "SmsBroadcast/1.0.0": {
+      "SmsBroadcast/0.1.1": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
           "Microsoft.Extensions.Options": "9.0.8",
           "Microsoft.Extensions.Options.DataAnnotations": "9.0.8",
-          "SmsBroadcast.Abstractions": "1.0.0"
+          "SmsBroadcast.Abstractions": "0.1.1"
         },
         "compile": {
           "bin/placeholder/SmsBroadcast.dll": {}
@@ -761,7 +761,7 @@
           "bin/placeholder/SmsBroadcast.dll": {}
         }
       },
-      "SmsBroadcast.Abstractions/1.0.0": {
+      "SmsBroadcast.Abstractions/0.1.1": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
@@ -774,7 +774,7 @@
           "bin/placeholder/SmsBroadcast.Abstractions.dll": {}
         }
       },
-      "SmsBroadcast.Extensions.DependencyInjection/1.0.0": {
+      "SmsBroadcast.Extensions.DependencyInjection/0.1.1": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
@@ -783,8 +783,8 @@
           "Microsoft.Extensions.Http": "9.0.8",
           "Microsoft.Extensions.Http.Polly": "9.0.8",
           "Polly": "8.6.2",
-          "SmsBroadcast": "1.0.0",
-          "SmsBroadcast.Abstractions": "1.0.0"
+          "SmsBroadcast": "0.1.1",
+          "SmsBroadcast.Abstractions": "0.1.1"
         },
         "compile": {
           "bin/placeholder/SmsBroadcast.Extensions.DependencyInjection.dll": {}
@@ -1862,17 +1862,17 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "SmsBroadcast/1.0.0": {
+    "SmsBroadcast/0.1.1": {
       "type": "project",
       "path": "../../../src/SmsBroadcast/SmsBroadcast.csproj",
       "msbuildProject": "../../../src/SmsBroadcast/SmsBroadcast.csproj"
     },
-    "SmsBroadcast.Abstractions/1.0.0": {
+    "SmsBroadcast.Abstractions/0.1.1": {
       "type": "project",
       "path": "../../../src/SmsBroadcast.Abstractions/SmsBroadcast.Abstractions.csproj",
       "msbuildProject": "../../../src/SmsBroadcast.Abstractions/SmsBroadcast.Abstractions.csproj"
     },
-    "SmsBroadcast.Extensions.DependencyInjection/1.0.0": {
+    "SmsBroadcast.Extensions.DependencyInjection/0.1.1": {
       "type": "project",
       "path": "../../../src/SmsBroadcast.Extensions.DependencyInjection/SmsBroadcast.Extensions.DependencyInjection.csproj",
       "msbuildProject": "../../../src/SmsBroadcast.Extensions.DependencyInjection/SmsBroadcast.Extensions.DependencyInjection.csproj"
@@ -1882,9 +1882,9 @@
     "net9.0": [
       "Microsoft.Extensions.Configuration >= 9.0.8",
       "Microsoft.NET.Test.Sdk >= 17.13.0",
-      "SmsBroadcast >= 1.0.0",
-      "SmsBroadcast.Abstractions >= 1.0.0",
-      "SmsBroadcast.Extensions.DependencyInjection >= 1.0.0",
+      "SmsBroadcast >= 0.1.1",
+      "SmsBroadcast.Abstractions >= 0.1.1",
+      "SmsBroadcast.Extensions.DependencyInjection >= 0.1.1",
       "coverlet.collector >= 6.0.4",
       "xunit >= 2.9.2",
       "xunit.runner.visualstudio >= 2.8.2"
@@ -1895,7 +1895,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "0.1.1",
     "restore": {
       "projectUniqueName": "C:\\Users\\AFerreira\\RiderProjects\\SmsBroadcast\\tests\\SmsBroadcast.Tests\\SmsBroadcast.Tests\\SmsBroadcast.Tests.csproj",
       "projectName": "SmsBroadcast.Tests",

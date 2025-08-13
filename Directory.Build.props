@@ -1,9 +1,1 @@
-<Project>
-    <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
-        <Nullable>enable</Nullable>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <LangVersion>latest</LangVersion>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    </PropertyGroup>
-</Project>
+<Project>  <PropertyGroup>    <!-- Build defaults -->    <TargetFramework>net8.0</TargetFramework>    <Nullable>enable</Nullable>    <ImplicitUsings>enable</ImplicitUsings>    <!-- NuGet metadata -->    <Authors>Andre</Authors>    <Company>AFig</Company>    <PackageLicenseExpression>MIT</PackageLicenseExpression>    <RepositoryUrl>https://github.com/Phalanx1234/SmsBroadcast</RepositoryUrl>    <RepositoryType>git</RepositoryType>    <PackageProjectUrl>https://github.com/Phalanx1234/SmsBroadcast</PackageProjectUrl>    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>    <PackageReadmeFile>README.md</PackageReadmeFile>    <PackageTags>sms;smsbroadcast;http;rest;dotnet;client</PackageTags>    <!-- Version: bump each release -->    <Version>0.1.1</Version>    <!-- Symbols & SourceLink -->    <IncludeSymbols>true</IncludeSymbols>    <SymbolPackageFormat>snupkg</SymbolPackageFormat>    <PublishRepositoryUrl>true</PublishRepositoryUrl>    <EmbedUntrackedSources>true</EmbedUntrackedSources>    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>    <GenerateDocumentationFile>true</GenerateDocumentationFile>  </PropertyGroup>  <!-- Embed README into each package if present -->  <ItemGroup>    <None Include="$(MSBuildThisFileDirectory)README.md" Pack="true" PackagePath="\" Condition="Exists('$(MSBuildThisFileDirectory)README.md')" />  </ItemGroup></Project>

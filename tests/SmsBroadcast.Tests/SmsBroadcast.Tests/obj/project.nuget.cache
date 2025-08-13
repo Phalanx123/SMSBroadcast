@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FeoeWkP8HHU=",
+  "dgSpecHash": "eDjmGio3VUM=",
   "success": true,
   "projectFilePath": "C:\\Users\\AFerreira\\RiderProjects\\SmsBroadcast\\tests\\SmsBroadcast.Tests\\SmsBroadcast.Tests\\SmsBroadcast.Tests.csproj",
   "expectedPackageFiles": [
@@ -37,6 +37,8 @@
     "C:\\Users\\AFerreira\\.nuget\\packages\\xunit.extensibility.core\\2.9.2\\xunit.extensibility.core.2.9.2.nupkg.sha512",
     "C:\\Users\\AFerreira\\.nuget\\packages\\xunit.extensibility.execution\\2.9.2\\xunit.extensibility.execution.2.9.2.nupkg.sha512",
     "C:\\Users\\AFerreira\\.nuget\\packages\\xunit.runner.visualstudio\\2.8.2\\xunit.runner.visualstudio.2.8.2.nupkg.sha512",
+    "C:\\Users\\AFerreira\\.nuget\\packages\\smsbroadcast.abstractions\\0.1.1\\smsbroadcast.abstractions.0.1.1.nupkg.sha512",
+    "C:\\Users\\AFerreira\\.nuget\\packages\\smsbroadcast.extensions.dependencyinjection\\0.1.1\\smsbroadcast.extensions.dependencyinjection.0.1.1.nupkg.sha512",
     "C:\\Users\\AFerreira\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.4\\microsoft.netcore.app.ref.9.0.4.nupkg.sha512",
     "C:\\Users\\AFerreira\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.4\\microsoft.windowsdesktop.app.ref.9.0.4.nupkg.sha512",
     "C:\\Users\\AFerreira\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.4\\microsoft.aspnetcore.app.ref.9.0.4.nupkg.sha512"
